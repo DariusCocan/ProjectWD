@@ -1,6 +1,6 @@
 const itemL = document.getElementById('item');
-form.addEventListener('submit',(e)=>{
-    e.preventDefault();
+form.addEventListener('submit',(def)=>{
+    def.preventDefault();
     additem();
 }) 
 function additem(item){
@@ -16,8 +16,8 @@ function additem(item){
 
         itemelement.innerText=itemtxt
         itemelement.addEventListener('click', ()=>itemelement.classList.toggle('done'))
-        itemelement.addEventListener('contextmenu', (e)=>{
-            e.preventDefault()
+        itemelement.addEventListener('contextmenu', (def)=>{
+            def.preventDefault()
             itemelement.remove()
         })
 
